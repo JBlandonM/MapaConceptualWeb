@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Conceptual - Sistemas de Información Pública</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="mynetwork"></div>
+    <div id="info-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2 id="modal-title">Título del Nodo</h2>
+            <div id="modal-body">Contenido detallado...</div>
+        </div>
+    </div>
+    <div id="hover-instructions" class="hover-instructions">
+        <span>🖱️ Click: Expandir/Contraer</span>
+    </div>
+
+    <!-- Barra de Progreso -->
+    <div id="progress-container" class="progress-container">
+        <div class="progress-header">
+            <span class="progress-title">Exploración del Mapa</span>
+            <span id="progress-text" class="progress-text">0%</span>
+        </div>
+        <div class="progress-track">
+            <div id="progress-fill" class="progress-fill"></div>
+        </div>
+    </div>
+
+    <!-- Menú específico del nodo que aparece al hacer hover -->
+    <div id="node-menu" class="node-menu">
+        <button id="btn-node-link" class="node-menu-btn" title="Ir al sitio web">🔗</button>
+        <button id="btn-node-info" class="node-menu-btn" title="Más información">ℹ️</button>
+    </div>
+    <!-- Firma de autoría -->
+    <div class="author-signature">
+        <span>Desarrollado por <strong>Jonathan Blandón M.</strong></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
